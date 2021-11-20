@@ -1,0 +1,197 @@
+@keyframes example {
+    0% {
+        top: 0px;
+        bottom: 300px;
+        /* transform: translateX(-100%); */
+        background-color: red;
+    }
+
+    50% {
+        top: 250px;
+        /* bottom: 150px; */
+        background-color: blueviolet;
+    }
+
+    100% {
+        top: 0px;
+        bottom: 300px;
+        /* transform: translateY(-100%); */
+        background-color: yellow;
+    }
+}
+
+* {
+    background-color: #aaa;
+}
+
+.bbox {
+    width: 650px;
+    height: 450px;
+    border: 2px solid #000;
+    position: absolute;
+    background-color: red;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes example2 {
+    0% {
+        left: 0px;
+        top: 0px;
+        background-color: gold;
+        /* transform: translate(-100%, 0%); */
+    }
+    25% {
+        left: 600px;
+        top: 0px;
+        background-color: hotpink;
+        /* transform: translate(0%, -100%); */
+    }
+    50% {
+        left: 600px;
+        top: 400px;
+        background-color: orange;
+        /* transform: translate(-100%, 0%); */
+    }
+    75% {
+        left: 0px;
+        top: 400px;
+        background-color: lightgreen;
+        /* transform: translate(-100%, 0%); */
+    }
+    100% {
+        left: 0px;
+        top: 0px;
+        /* transform: translate(0%, -100%); */
+    }
+}
+
+.mmain {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    /* background-color: red; */
+    animation-name: example2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+    animation-direction: reverse;
+    /* animation-direction: alternate; */
+}
+
+.box {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #000;
+    /* margin: auto; */
+    /* top: 200px; */
+    background-color: yellowgreen;
+}
+
+.main {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    /* background-color: red; */
+    animation-name: example;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+@keyframes example1 {
+    0% {
+        top: 250px;
+        /* bottom: 0px; */
+        background-color: blueviolet;
+    }
+
+    50% {
+        bottom: 250px;
+        top: 0px;
+        background-color: yellow;
+    }
+
+    100% {
+        top: 250px;
+        /* bottom: 0px; */
+        background-color: red;
+    }
+}
+
+.main2 {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: red;
+    animation-name: example1;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+.bbox:hover > .box > .main {
+    /* background-color: aliceblue; */
+    animation-play-state: paused;
+}
+
+.box:hover {
+    background-color: peru;
+}
+
+@keyframes example3 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+    0% {
+        left: 0%;
+        top: 0%;
+    }
+    25% {
+        left: 95%;
+        top: 0px;
+    }
+    50% {
+        left: 95%;
+        top: 570px;
+    }
+    75% {
+        left: 0%;
+        top: 570px;
+    }
+    100% {
+        left: 0%;
+        top: 0px;
+    }
+}
+
+.one {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #000;
+    background-color: rgb(130, 179, 179);
+    /* border-radius: 50%; */
+    animation-name: example3;
+    position: relative;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+
